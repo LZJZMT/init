@@ -1,2 +1,11 @@
 # init
-centos 和 ubuntu 18.04一键安装脚本
+
+配置centos和ubuntu18.04的一些基础配置
+
+neovim
+
+oh_my_zsh
+
+docker
+
+未完待续.....
