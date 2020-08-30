@@ -16,6 +16,7 @@ cat <<-'EOF'
 |          11.安装docker版-mysql        |
 |          12.升级git到2.9.5            |
 |          13.安装Go语言环境            |
+|          14.测速                      |
 +---------------------------------------+
 
 EOF
@@ -281,7 +282,20 @@ twelve(){
     rm -rf git-2.9.5.tar.gz
 	
 }
-
+thirteen(){
+    if ! command -v speedtest&>/dev/null ;then 
+        if ! command -v git&>/dev/null ;then 
+            $P_M install git
+        fi 
+        git clone https://github.com/sivel/speedtest-cli.git
+        cd speedtest-cli
+        python setup.py install
+        speedtest
+        rm -rf -R speedtest-cli
+    else
+        speedtest
+    fi
+}
 echo -en "Please input your number:"
 read op
 # echo $op
@@ -335,7 +349,10 @@ case "$op" in
 13)	
 	twelve
 	;;
-*)
-	echo "输入错误!!"
+14)	
+	thirteen
 	;;
+*)
+    echo "输入错误!!"
+    ;;
 esac
