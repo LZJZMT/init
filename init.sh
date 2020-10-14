@@ -115,7 +115,7 @@ four(){ #配置docker
 			#yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 			$P_M -y install docker
 		else
-			$P_M -y install docker
+			$P_M -y install docker.io
 		fi
 	fi
 
@@ -169,7 +169,7 @@ five(){  #安装annie
         $P_M install -y tar 
     fi
 	if ! command -v annie&>/dev/null ;then 
-		wget "http://123.56.145.243:8082/s/zZZFWgmKKW7L75S/download?path=%2F&files=annie_0.10.3_Linux_64-bit.tar.gz" -O annie_0.10.3_Linux_64-bit.tar.gz
+		wget "http://123.56.145.243:8082/s/s2zNLWmw3BpSZNP/download?path=%2F&files=annie_0.10.3_Linux_64-bit.tar.gz" -O annie_0.10.3_Linux_64-bit.tar.gz
 		if [ $? -eq 0 ];then
 			tar xvzf annie_0.10.3_Linux_64-bit.tar.gz
 			sudo mv annie /usr/bin
@@ -190,7 +190,7 @@ six(){
         $P_M install -y bzip2
     fi
 	if ! command -v ffmpeg&>/dev/null ;then 
-        wget "http://123.56.145.243:8082/s/zZZFWgmKKW7L75S/download?path=%2F&files=ffmpeg-release-amd64-static.tar.xz" -O ffmpeg-release-amd64-static.tar.xz
+        wget "http://123.56.145.243:8082/s/s2zNLWmw3BpSZNP/download?path=%2F&files=ffmpeg-release-amd64-static.tar.x" -O ffmpeg-release-amd64-static.tar.xz
 		if [ $? -eq 0 ];then
 			xz -d ffmpeg-release-amd64-static.tar.xz
 			tar -xvf ffmpeg-release-amd64-static.tar
