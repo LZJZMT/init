@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 
 cat <<-'EOF'
 +---------------------------------------+
@@ -190,7 +190,7 @@ six(){
         $P_M install -y bzip2
     fi
 	if ! command -v ffmpeg&>/dev/null ;then 
-        wget "http://123.56.145.243:8082/s/s2zNLWmw3BpSZNP/download?path=%2F&files=ffmpeg-release-amd64-static.tar.x" -O ffmpeg-release-amd64-static.tar.xz
+        wget "http://123.56.145.243:8082/s/s2zNLWmw3BpSZNP/download?path=%2F&files=ffmpeg-release-amd64-static.tar.xz" -O ffmpeg-release-amd64-static.tar.xz
 		if [ $? -eq 0 ];then
 			xz -d ffmpeg-release-amd64-static.tar.xz
 			tar -xvf ffmpeg-release-amd64-static.tar
